@@ -24,3 +24,10 @@ a {
 a:hover {
   color: #56c2e0;
 }
+
+table tr:nth-child(odd) td{
+  background-color: #2f343d; 
+}
+table tr:nth-child(even) td{
+  background-color: #282c34;
+}

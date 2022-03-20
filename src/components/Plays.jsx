@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { 
   THEATER, 
   ADDRES, 
-  DETAILS, 
   PHONE, 
   PLAY, 
   PRICE,
@@ -10,6 +9,7 @@ import {
 } from "../constants"
 import { filterBillboardByDay } from '../actions'
 import Play from "./Play"
+import Th from "./Th"
 
 const getDataToShow = (theaters, billboard, currentDay) => {
   const currentBillBoard = filterBillboardByDay(currentDay, billboard)
@@ -32,12 +32,9 @@ const Plays = ({ theaters, billboard, currentDay }) => {
     <table style={{color: 'whitesmoke'}}>
       <thead style={{fontSize: '28px', textShadow: '2px 2px 5px blueviolet'}}>
         <tr>
-          <th>{PLAY}</th>
-          <th>{TIME}</th>
-          <th>{THEATER}</th>
-          <th>{ADDRES}</th>
-          <th>{PHONE}</th>
-          <th>{PRICE}</th>
+          {[PLAY, TIME, THEATER, ADDRES, PHONE, PRICE].map((header, ix) => 
+            <Th header={header} billboard={plays} setBillboard={setPlays} key={ix}/>
+          )}
         </tr>
       </thead>
       <tbody>

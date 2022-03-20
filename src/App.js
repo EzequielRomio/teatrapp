@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { getTheaters, getDay, getBillboard } from './actions';
 // import Theaters from './components/Theaters';
 import Plays from './components/Plays';
-import Header from './components/Header';
+import Title from './components/Title';
 import './App.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Title />
       <hr style={{height: '26px', backgroundColor: '#BC8F8F'}}></hr>
       {theaters && theaters.length && billboard && billboard.length && <Plays theaters={theaters} billboard={billboard} currentDay={currentDay} />}
       {/* {theaters && theaters.length && <Theaters theaters={theaters}/>} */}

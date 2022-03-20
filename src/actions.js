@@ -1,5 +1,16 @@
 import { billboard, theaters } from "./data"
-import { THEATERS_HEADERS, BILLBOARD_HEADERS, DAYS, THEATER, DAY, PRICE } from "./constants"
+import { 
+  THEATERS_HEADERS, 
+  BILLBOARD_HEADERS, 
+  DAYS, 
+  THEATER, 
+  DAY, 
+  PRICE, 
+  PLAY, 
+  TIME, 
+  ADDRES, 
+  PHONE 
+} from "./constants"
 
 export const getTheaters = () => {
   const formattedTheaters = []
@@ -43,6 +54,40 @@ export const getDay = () => {
 
 export const filterBillboardByDay = (day, billboard) => {
   return billboard.filter(play => play[DAY] === day)
+}
+
+export const sortPlays = (billboard, field, isAsc=false) => {
+  const result = [...billboard]
+  if ([PLAY, THEATER, ADDRES].includes(field)) {
+    return result.sort((a, b) => isAsc ? b[field].localeCompare(a[field]) : a[field].localeCompare(b[field]))
+  }
+  if (field === PRICE) {
+    return result.sort((a, b) => {
+      const priceA = getPrice(a[PRICE])
+      const priceB = getPrice(b[PRICE])
+      return isAsc ? priceA - priceB : priceB - priceA
+    })
+  }
+  if (field === TIME) {
+    return result.sort((a, b) => {
+      const dateA = getDateFormat(a[TIME])
+      const dateB = getDateFormat(b[TIME])
+      return isAsc ? dateA - dateB : dateB - dateA
+    })
+  } 
+}
+
+const getPrice = (price) => {
+  if (price === " - " || price === "-") return 0;
+  let parsedPrice = price
+  const invalidChs = [',', '.', '$']
+  invalidChs.forEach(ch => parsedPrice = parsedPrice.replaceAll(ch, ''))
+  parsedPrice = parsedPrice.includes('/') ? parseInt(parsedPrice.split('/')[0]) + 1 : parseInt(parsedPrice)
+  return parsedPrice
+}
+
+const getDateFormat = (time) => {
+  return new Date(`January, 1995, ${time.split(' hs')[0]}:00`)
 }
 
 const parsePrice = (price) => {

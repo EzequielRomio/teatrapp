@@ -15,7 +15,7 @@ const style = {
   textShadow: '5px 5px 10px blueviolet'
 }
 
-const Header = () => {
+const Title = () => {
   return <header style={style}>
     <div style={{height: '160px'}}></div>
     TeatrAPP
@@ -23,4 +23,4 @@ const Header = () => {
   </header>
 }
 
-export default Header
+export default Title
