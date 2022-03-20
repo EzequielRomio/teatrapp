@@ -29,18 +29,20 @@ const Plays = ({ theaters, billboard, currentDay }) => {
     setPlays(getDataToShow(theaters, billboard, currentDay))
   }, [])
   return (
-    <table style={{color: 'whitesmoke'}}>
-      <thead style={{fontSize: '28px', textShadow: '2px 2px 5px blueviolet'}}>
-        <tr>
-          {[PLAY, TIME, THEATER, ADDRES, PHONE, PRICE].map((header, ix) => 
-            <Th header={header} billboard={plays} setBillboard={setPlays} key={ix}/>
-          )}
-        </tr>
-      </thead>
-      <tbody>
-        {plays && plays.length ? plays.map((play, ix) => <Play key={ix} play={play} />) : null}
-      </tbody>
-    </table>
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+      <table style={{color: 'whitesmoke'}}>
+        <thead style={{fontSize: '28px', textShadow: '2px 2px 5px blueviolet'}}>
+          <tr>
+            {[PLAY, TIME, THEATER, ADDRES, PHONE, PRICE].map((header, ix) => 
+              <Th header={header} billboard={plays} setBillboard={setPlays} key={ix}/>
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {plays && plays.length ? plays.map((play, ix) => <Play key={ix} play={play} />) : null}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

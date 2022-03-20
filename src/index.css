@@ -25,9 +25,24 @@ a:hover {
   color: #56c2e0;
 }
 
+table tr td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 table tr:nth-child(odd) td{
   background-color: #2f343d; 
 }
 table tr:nth-child(even) td{
   background-color: #282c34;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
