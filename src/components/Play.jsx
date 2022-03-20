@@ -19,8 +19,8 @@ const Play = ({play}) => {
       <td>{play[TIME]}</td>
       <td>{play[THEATER]}</td>
       <td>{play[ADDRES]}</td>
-      <td>{play[PHONE]}</td>
-      <td>{play[PRICE]}</td>
+      <td>{play[PHONE] === '0' || !play[PHONE] ? '-' : play[PHONE]}</td>
+      <td>{(play[PRICE]).replaceAll(' ', '')}</td>
     </tr>   
   ) 
 }

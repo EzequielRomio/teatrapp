@@ -27,5 +27,5 @@ export const DAYS = {
   4: 'jueves',
   5: 'viernes',
   6: 'sábado',
-  7: 'domingo'
+  0: 'domingo'
 }

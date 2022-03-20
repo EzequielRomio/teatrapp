@@ -19,7 +19,7 @@ const Header = () => {
   return <header style={style}>
     <div style={{height: '160px'}}></div>
     TeatrAPP
-    <img src={masks} width='180'></img>
+    <img src={masks} width='180' alt='happy and sad theater masks'></img>
   </header>
 }
 

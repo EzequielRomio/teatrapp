@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getTheaters, getDay, getBillboard } from './actions';
-import Theaters from './components/Theaters';
+// import Theaters from './components/Theaters';
 import Plays from './components/Plays';
 import Header from './components/Header';
 import './App.css';

@@ -41,7 +41,7 @@ const Plays = ({ theaters, billboard, currentDay }) => {
         </tr>
       </thead>
       <tbody>
-        {plays && plays.length && plays.map((play, ix) => <Play key={ix} play={play} />)}
+        {plays && plays.length ? plays.map((play, ix) => <Play key={ix} play={play} />) : null}
       </tbody>
     </table>
   )
