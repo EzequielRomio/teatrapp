@@ -19,13 +19,6 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <title>Catelera del día</title>
-        <meta
-          property="og:description"
-          content=" jdkladjslajdlOferta teatral del día de hoy en la Ciudad de Buenos Aires"
-        />
-      </Helmet>
       <Title />
       <hr style={{height: '26px', backgroundColor: '#BC8F8F'}}></hr>
       {theaters && theaters.length && billboard && billboard.length && <Plays theaters={theaters} billboard={billboard} currentDay={currentDay} />}
