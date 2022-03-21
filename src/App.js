@@ -9,11 +9,16 @@ function App() {
   const [theaters, setTheaters] = useState([])
   const [currentDay, setCurrentDay] = useState(0)
   const [billboard, setBillboard] = useState([])
-
+  const setDescription = desc => {
+    const el = document.querySelector("meta[name='description']");
+    el.setAttribute('content',desc)
+  }
   useEffect(() => {
     setTheaters(getTheaters)
     setCurrentDay(getDay)
     setBillboard(getBillboard)
+    const el = document.querySelector("meta[name='description']");
+    el.setAttribute('content', 'Oferta teatral del día de hoy en la Ciudad de Buenos Aires')
   }, [])
 
   return (
