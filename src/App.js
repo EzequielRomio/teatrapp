@@ -22,7 +22,7 @@ function App() {
       <Helmet>
         <title>Catelera del día</title>
         <meta
-          name="og:description"
+          property="og:description"
           content=" jdkladjslajdlOferta teatral del día de hoy en la Ciudad de Buenos Aires"
         />
       </Helmet>
