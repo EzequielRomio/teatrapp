@@ -8,7 +8,7 @@ export const WEB_SITE = 'Sitio Web';
 export const DAY = 'Día';
 export const TIME = 'Horario';
 export const PLAY = 'Obra';
-export const PRICE = 'Valor de la entrada'
+export const PRICE = 'Entrada'
 
 export const THEATERS_HEADERS = [
   THEATER, ADDRES, PHONE, CITY, IMG, DETAILS, WEB_SITE

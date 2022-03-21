@@ -12,7 +12,7 @@ const Th = ( { header, setBillboard, billboard } ) => {
   }
   return (
     <th>
-      <span style={{marginLeft: header !== PHONE ? '40px' : '0px'}}>
+      <span style={{marginLeft: header !== PHONE ? '40px' : '0px', whiteSpace: 'nowrap'}}>
         {header}
       </span>
       {

@@ -11,15 +11,15 @@ import {
 const Play = ({play}) => {
   return (
     <tr style={{height: '40px'}}>
-      <td>
-        <a href={play[DETAILS]} target="_blank">
+      <td style={{minWidth: '220px'}}>
+        <a href={play[DETAILS]} target="_blank" rel="noreferrer">
           {play[PLAY]}
         </a>
       </td>
       <td>{play[TIME]}</td>
-      <td>{play[THEATER]}</td>
+      <td style={{whiteSpace: 'nowrap', paddingLeft: '5px', paddingRight: '5px'}}>{play[THEATER]}</td>
       <td>{play[ADDRES]}</td>
-      <td>{play[PHONE] === '0' || !play[PHONE] ? '-' : play[PHONE]}</td>
+      <td style={{whiteSpace: 'nowrap'}}>{play[PHONE] === '0' || !play[PHONE] ? '-' : play[PHONE]}</td>
       <td>{(play[PRICE]).replaceAll(' ', '')}</td>
     </tr>   
   ) 

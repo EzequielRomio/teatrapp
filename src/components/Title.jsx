@@ -16,7 +16,7 @@ const style = {
 }
 
 const Title = () => {
-  return <header style={style}>
+  return <header style={style} className='overflowScroll'>
     <div style={{height: '160px'}}></div>
     TeatrAPP
     <img src={masks} width='180' alt='happy and sad theater masks'></img>

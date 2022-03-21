@@ -28,6 +28,12 @@ a:hover {
 table tr td {
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+th {
+  white-space: nowrap;
 }
 
 table tr:nth-child(odd) td{
@@ -45,4 +51,8 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+.overflow-scroll {
+  overflow-x: scroll;
 }
