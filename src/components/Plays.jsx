@@ -29,7 +29,7 @@ const Plays = ({ theaters, billboard, currentDay }) => {
     setPlays(getDataToShow(theaters, billboard, currentDay))
   }, [])
   return (
-    <div style={{marginLeft: '10px', marginRight: '10px'}} className='overflow-scroll'>
+    <div className='table-container'>
       <table style={{color: 'whitesmoke'}}>
         <thead style={{fontSize: '28px', textShadow: '2px 2px 5px blueviolet'}}>
           <tr>

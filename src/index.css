@@ -53,6 +53,15 @@ button {
 	outline: inherit;
 }
 
-.overflow-scroll {
-  overflow-x: scroll;
+.table-container {
+  display: inline-block;
+}
+
+@media (max-width: 1290px) {
+  .table-container {
+    display: block;
+    overflow-x: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
