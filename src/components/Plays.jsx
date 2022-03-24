@@ -31,7 +31,7 @@ const Plays = ({ theaters, billboard, currentDay }) => {
   return (
     <div className='table-container'>
       <table style={{color: 'whitesmoke'}}>
-        <thead style={{fontSize: '28px', textShadow: '2px 2px 5px blueviolet'}}>
+        <thead style={{fontSize: '28px', textShadow: '6px 6px 10px #000'}} className={'title-font'}>
           <tr>
             {[PLAY, TIME, THEATER, ADDRES, PHONE, PRICE].map((header, ix) => 
               <Th header={header} billboard={plays} setBillboard={setPlays} key={ix}/>

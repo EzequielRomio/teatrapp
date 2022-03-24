@@ -19,8 +19,14 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <hr style={{height: '26px', backgroundColor: '#BC8F8F'}}></hr>
-      {theaters && theaters.length && billboard && billboard.length && <Plays theaters={theaters} billboard={billboard} currentDay={currentDay} />}
+      <hr style={{height: '26px', backgroundColor: 'burlywood', border: 'burlywood', boxShadow: '5px 5px 20px #000'}}></hr>
+      {
+        theaters && 
+        theaters.length && 
+        billboard && 
+        billboard.length && 
+        <Plays theaters={theaters} billboard={billboard} currentDay={currentDay} />  
+      }
       {/* {theaters && theaters.length && <Theaters theaters={theaters}/>} */}
     </div>
   );

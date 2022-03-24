@@ -10,17 +10,22 @@ const style = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  fontSize: 'calc(40px + 2vmin)',
+  fontSize: 'calc(48px + 2vmin)',
   color: 'white',
-  textShadow: '5px 5px 10px blueviolet'
+  textShadow: '6px 6px 10px #000'
 }
 
 const Title = () => {
-  return <header style={style} className='overflowScroll'>
-    <div style={{height: '160px'}}></div>
-    TeatrAPP
-    <img src={masks} width='180' alt='happy and sad theater masks'></img>
-  </header>
+  return (
+    <header style={style} className={'title-font'}>
+      <div style={{height: '160px'}}></div>
+      <span style={{transform: 'rotate(-3deg)'}}>A LLENAR LAS SALAS!</span>
+      
+      <img src={masks} width='180' alt='happy and sad theater masks'></img>      
+      
+
+    </header>
+  )
 }
 
 export default Title
