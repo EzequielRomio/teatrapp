@@ -18,7 +18,11 @@ const Play = ({play}) => {
       </td>
       <td>{play[TIME]}</td>
       <td style={{whiteSpace: 'nowrap', paddingLeft: '5px', paddingRight: '5px'}}>{play[THEATER]}</td>
-      <td>{play[ADDRES]}</td>
+      <td>
+        <a href={`https://maps.google.com/?q=${play[ADDRES]}, Buenos Aires`} target="_blank" rel="noreferrer">
+          {play[ADDRES]}
+        </a>
+      </td>
       <td style={{whiteSpace: 'nowrap'}}>{play[PHONE] === '0' || !play[PHONE] ? '-' : play[PHONE]}</td>
       <td>{(play[PRICE]).replaceAll(' ', '')}</td>
     </tr>   

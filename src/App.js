@@ -4,7 +4,6 @@ import { getTheaters, getDay, getBillboard } from './actions';
 import Plays from './components/Plays';
 import Title from './components/Title';
 import './App.css';
-import { Helmet } from 'react-helmet'
 
 function App() {
   const [theaters, setTheaters] = useState([])

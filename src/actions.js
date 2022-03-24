@@ -8,8 +8,7 @@ import {
   PRICE, 
   PLAY, 
   TIME, 
-  ADDRES, 
-  PHONE 
+  ADDRES,
 } from "./constants"
 
 export const getTheaters = () => {
